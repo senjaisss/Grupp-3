@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pärmar & Poesi</title>
     <link rel="stylesheet" href="style.css">
+    <!--importerar fontfamilj-->
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
+      
 </head>
 <body>
     <header>
@@ -18,24 +23,34 @@
     </header>
     
     <main>
-            <p>Jag är ett jättelitet test för merge request</p>
-        <article>
-            <p>hej</p>
             <section>
-                <h1>Välkommen!</h1>
+
             </section>
-            <ul>
-                <li>Katter</li>
-                <li>är</li>
-                <li>söta</li>
-                <li>men</li>
-                <li>jobbiga</li>
-            </ul>
-        </article>
     </main>
 
     <footer>
+    <!-- sektioner indelade för kontakta oss och formuläret-->
+        <section class="contactInfo">
+         
+        </section>
 
+        <section class="contactForm">
+            <form action="input">
+                <label for="mail">Email</label>
+                <textarea name="email" id="mail" form="input" required></textarea>
+                <br>
+                <label for="namn">Förnamn</label>
+                <textarea name="namn" id="firstName" form="input" required></textarea>
+                <label for="namn">Efternamn</label>
+                <textarea name="namn" id="lastName" form="input" required></textarea>
+                <br>
+                <label for="message">Meddelande</label>
+                <textarea name="message" id="message" form="input">Skriv ett meddelande</textarea>
+                <br>
+                <button type="submit">Bekräfta</button>
+            </form>
+
+        </section>
     </footer>
 
 </body>
