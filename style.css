@@ -40,6 +40,10 @@ footer textarea{
     padding: .5vh;
     height: 3vh;
 }
+input{
+    display: flex;
+    justify-content: center;
+}
 
 #firstName{
     width: 15vh;
