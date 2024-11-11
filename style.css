@@ -111,6 +111,17 @@ main{
     /* border: 2px solid blue; */
 }
 
+.contactbox {
+    width: 40%;
+    height: 40%;
+    background-color: #F3EFE0; 
+    border-radius: 10px;
+    
+    position: absolute;
+    bottom: 65px; 
+    right: 84px; 
+  }
+
 .line {
     width: 50%;
     height: 3px;
