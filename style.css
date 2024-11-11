@@ -9,7 +9,13 @@ body{
     color: #F3EFE0;
 }
 
-header section{
-    padding-left: 15%;
-    background-color: #FD6C7B;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.search {
+    margin-left: auto;
 }
