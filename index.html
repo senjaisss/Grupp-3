@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="container">
-    <nav>nav</nav>
-    <section>evenemang</section>
+  <body class="container">
     <header class="logo">
-        <div class="img-container">
-            <img class="logo-img" src="/bilder/logo smaller.png" alt="book-and-quill">
-            <h1 class="overlay-text">Pärmar & Poesi</h1>
-        </div>
-        <div class="line"></div>
+      <div class="img-container">
+        <img
+          class="logo-img"
+          src="/bilder/logo smaller.png"
+          alt="book-and-quill"
+        />
+        <h1 class="overlay-text">Pärmar & Poesi</h1>
+      </div>
+      <div class="line"></div>
     </header>
+  </body>
 
-<main>
+  <body>
+    <section>
+        <article class="contactbox">
+            <section class="contactInfo"></section>
 
-        <section class="bokpreview">
-            <div class="bokcontainer">
-                <img src="bilder/coverplaceholder.png" alt="placeholder1" name="cover">
-                <img src="bilder/coverplaceholder.png" alt="placeholder2" name="cover">
-                <img src="bilder/coverplaceholder.png" alt="placeholder3" name="cover">
-            </div>
-           
-            <div class="bokblurb">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum molestias odio provident 
-                    rerum beatae autem blanditiis nesciunt, voluptas quis in, iusto eos, eum vitae? 
-                    Necessitatibus porro odit accusamus, sint repellendus sed ea laboriosam, 
-                    veritatis unde, officiis deserunt quod facere cum!</p>
-            </div>
+            <section class="contactForm">
+                <!-- sektioner indelade för kontakta oss och formuläret-->
+                <form action="input">
+                    <label for="mail">Email</label>
+                    <input type="text" id="mail" />
+                    <label for="namn">Förnamn</label>
+                    <input type="text" id="firstName" />
+                    <label for="namn">Efternamn</label>
+                    <input type="text" id="lastName" />
+                    <br />
+                    <label for="message">Meddelande</label>
+                    <textarea name="message" id="message">Skriv en rad</textarea>
+                    <br />
+                    <button type="submit">Bekräfta</button>
+                </form>
+            </section>
+        </article>  
+    </section>
+  </body>
 
-        </section>
-</main>
-
-</body>
-
-<footer>
-    <!-- sektioner indelade för kontakta oss och formuläret-->
-        <section>
-
-        </section>
-    </footer>
+  <footer></footer>
 </html>
