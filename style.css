@@ -52,6 +52,17 @@ nav a {
   color: #f3efe0;
 }
 
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #f3efe0;
+}
+
+nav a:hover {
+  color: #FF6978;
+}
+
 .evenemang {
   display: flex;
   justify-content: space-between;
