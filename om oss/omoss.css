@@ -30,6 +30,10 @@ a:hover {
     color: #FF6978
 }
 
+a:active {
+    color:  rgba(253, 108, 123, 0.5)
+}
+
 .nav-logo {
     display: none;
 }
@@ -104,6 +108,7 @@ a:hover {
     grid-area: rubrik;
     display: flex;
     justify-content: center;
+    font-size: 1.5em;
 }
 
 h2 {
@@ -127,12 +132,12 @@ h2 {
     margin-top: 1%;
     margin-bottom: 1%;
     background-color: #f3efe0;
-
-    border: 2px solid yellow;
 }
 .text {
     grid-area: omoss;
     margin: 2%;
+    font-family: "Playfair", serif;
+    font-size: 1.3em;
 
     flex-basis: 100%;
 }
@@ -140,6 +145,8 @@ h2 {
 .map {
     grid-area: map;
     margin: 2%;
+    font-family: "Playfair", serif;
+    font-size: 1.3em;
 
     display: flex;
     flex-direction: column;
@@ -161,10 +168,10 @@ iframe{
         margin: 0;
     }
 
-    .navbar {
-        width: 30%;
+    .navlinks {
         display: flex;
         justify-content: space-evenly;
+        gap: 2rem;
     }
 
     .nav-logo {
@@ -217,8 +224,6 @@ iframe{
     }
 
     .grid-container {
-        /* width: 100%;
-        height: auto; */
         display: grid;
         grid-template-areas:
             "linje-one"
@@ -226,7 +231,10 @@ iframe{
             "linje-two"
             "rubrik"
             "omoss";
-            /* justify-content: center; */
+    }
+
+    article h2 {
+
     }
 
     .text-boxes {

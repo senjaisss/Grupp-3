@@ -46,6 +46,10 @@ nav a {
     color: #f3efe0;
 }
 
+nav a:hover {
+  color: #FF6978;
+}
+
 .evenemang {
     height: 200px; 
     background-color: #f3efe0;
