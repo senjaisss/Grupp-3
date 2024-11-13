@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+      href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium" rel="stylesheet">
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    </head>
 
   <body class="container">
     <nav>
         <div class="navlinks">
-        <a href="Om oss">Om oss</a>
+        <a href="omoss.css">Om oss</a>
         <a href="Boknyheter">Boknyheter</a>
         </div>
-        <form> <input type="search" placeholder="Sök..."></form>
+        <form id="searchForm"><input type="search" placeholder="Sök..."></form>
+        <span class="hamburger">☰</span>
     </nav>
-    <section class="evenemang"> </section>
+
+    <section class="evenemang">
+      <div class="evenemangtext">
+      <h2 class="rubrik">Julmys hos oss!</h2>
+      <p class="undertext">Vi bjuder på läs-inspo och julfika</p>
+      </div>
+      <img src="illustration.png" alt="evenemangs illustration">
+    </section>
 
 
     <header class="logo">
@@ -34,7 +42,11 @@
     </header>
 
     <section class="boknyheter">
-        <p>boknyheter</p>
+        <img src="bokny.png" alt="boknyheter bild">
+        <h3 class="bokrubrik">Efter Ekot av Olivia Bergdahl </h3>
+        <p class="omboken"> “Fanny har åkt till sin mormor på Västgötaslätten, för hennes mormor vet  
+          ingenting om vad som har hänt. Hon bara skrapar sin potatis och dukar på 
+          verandan och anar inte hur lätt allt går åt helvete”...</p>
     </section>
 
     <article class="contactbox">

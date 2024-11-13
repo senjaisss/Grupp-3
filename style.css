@@ -6,24 +6,22 @@
 
 body {
     margin: 20px;
-    font-family: inknut antigua;
+    font-family: 'playfair', sans-serif;
     background-color: #7a0e2a;
 }
 
 .container {
-    display: flex;
   height: auto;
   background-color: #7b0828;
-
   display: grid;
   grid-template-areas:
     "nav nav"
-    "section section"
     "evenemang evenemang"
     "header header"
     "boknyheter contactbox";
     grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  padding: 10px;
 }
 
 .container > nav {
@@ -34,6 +32,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 20px;
 }
 
 .navlinks {
@@ -46,18 +45,56 @@ nav a {
     color: #f3efe0;
 }
 
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #f3efe0;
+}
+
 .evenemang {
-    height: 200px; 
-    background-color: #f3efe0;
-    grid-area: evenemang;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 200px;
+  max-width: 100%;
+  background-color: #f3efe0;
+  grid-area: evenemang;
+  border-radius: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.evenemangtext {
+  flex: 1;
+  min-width: 200px;
+  max-width: 60%;
+  margin-right: 20px;
+}
+
+.rubrik {
+  font-size: clamp(24px, 5vw, 40px);
+  margin-bottom: 10px;
+}
+
+.undertext {
+  font-size: clamp(18px, 3vw, 30px);
+}
+
+.evenemang img {
+  max-width: 100%;
+  min-height: 50px;
+  flex: 1;
+  min-width: 200px;
+  object-fit: contain;
 }
 
 .logo {
   grid-area: header;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding: 0 20px;
 }
 
 .img-container {
@@ -65,55 +102,33 @@ nav a {
 }
 
 .logo-img {
-  width: 50%;
-  margin-left: 60%;
+  width: 30%;
+  max-width: 200px;
+  margin-left: 0;
 }
 
 .overlay-text {
   position: absolute;
-  top: 42%;
-  left: 90%;
+  top: 50%;
+  left: 0;
   transform: translate(-50%, -50%);
-
   font-family: "Inknut Antiqua", serif;
   color: #f3efe0;
   text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000,
     -1px 1px 5px #000, 1px 1px 5px #000;
   font-weight: 200;
-  font-size: 2.7em;
+  font-size: 1.8em;
   white-space: nowrap;
 }
 
 .line {
-  width: 58%;
+  width: 55%;
   height: 3px;
   background: linear-gradient(90deg, #f3efe0, #ffffff, #f3efe0);
   border-radius: 3px;
   box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 
   display: none;
-}
-
-@media (min-width: 768px) {
-  .line {
-    display: block;
-    margin: 1em;
-  }
-
-  .overlay-text {
-    position: absolute;
-    top: 40%;
-    left: 140%;
-    transform: translate(-50%, -50%);
-    font-size: 3.8em;
-    font-weight: 300;
-    letter-spacing: 3px;
-    margin: 0 auto;
-  }
-
-  .logo-img {
-    margin-left: 100%;
-  }
 }
 
 .contactbox , .boknyheter {
@@ -129,4 +144,149 @@ nav a {
 }
 .boknyheter {
     grid-area: boknyheter;
+}
+
+.bokrubrik {
+  font-size: 30px;
+}
+
+.omboken {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .line {
+    display: block;
+    margin: 1em auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 140%;
+    transform: translate(-50%, -50%);
+    font-size: 3.8em;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+
+  .logo-img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo-img {
+    width: 30%; 
+  }
+
+  .overlay-text {
+    font-size: 1.8em;
+    left: 50%; 
+    top: 50%; 
+  }
+}
+
+.logo-img, .evenemang img {
+  transition: width 0.3s ease, max-width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactbox,
+  .boknyheter {
+    width: 100%;
+  }
+
+  .contactbox {
+    order: 6;
+  }
+
+  .evenemang {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .evenemangtext {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .evenemang img {
+    max-width: 20%;
+  }
+
+  .rubrik {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+  
+  .undertext {
+    font-size: clamp(20px, 4vw, 28px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .evenemang {
+    max-height: 250px;
+    padding: 40px;
+  }
+
+  .evenemangtext {
+    max-width: 50%;
+  }
+
+  .evenemang img {
+    max-width: 35%;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  #searchForm {
+    display: none;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .navlinks {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #7b0828;
+      padding: 20px;
+  }
+
+  .navlinks.active {
+      display: flex;
+  }
+
+  nav {
+      flex-wrap: wrap;
+  }
+
+  nav form {
+      order: -1;
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .boknyheter img {
+      max-width: 90%;
+      height: auto; 
+  }
 }
