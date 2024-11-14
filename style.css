@@ -114,7 +114,7 @@ nav a:hover {
 
 .logo-img {
   width: 30%;
-  margin-left: 50%;
+  margin-left: 35%;
 }
 
 .overlay-text {
@@ -162,6 +162,90 @@ nav a:hover {
 
 .omboken {
   font-size: 20px;
+}
+
+.content {
+  background-color: #F3EFE0;
+  color: #000;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contactform {
+  width: 100%;
+  padding: 20px; 
+}
+
+.formgroup label {
+  font-weight: bold;
+  color: #000;
+}
+
+.formgroup input, .formgroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+.newsletter {
+  font-weight: bold;
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#error-message {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+}
+
+button{
+  padding: 12px;
+  font-size: 18px;
+  background-color: #7b0828;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;   
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  width: 100%; 
+}
+
+.hover-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #7B0828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.hover-btn:hover {
+  background-color: #FF6978; 
+
+}
+
+.follow {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #000;
 }
 
 @media (min-width: 768px) {
@@ -242,6 +326,15 @@ nav a:hover {
   .undertext {
     font-size: clamp(20px, 4vw, 28px);
   }
+
+  .content {
+    width: 90%;
+}
+
+
+button {
+    font-size: 16px;
+}
 }
 
 @media (min-width: 1200px) {
