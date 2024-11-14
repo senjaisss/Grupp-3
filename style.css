@@ -203,12 +203,6 @@ nav a:hover {
   padding: 10px;
 }
 
-#error-message {
-  color: red;
-  font-size: 0.9em;
-  display: none;
-}
-
 button{
   padding: 12px;
   font-size: 18px;
