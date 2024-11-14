@@ -21,17 +21,13 @@ body {
 a {
     text-decoration: none;
     color: #F3EFE0;
-    font-family: "Playfair", serif;
+    /* font-family: "Playfair", serif;
     font-weight: 300;
-    margin: 6px;
+    margin: 6px; */
 }
 
 a:hover {
     color: #FF6978
-}
-
-a:active {
-    color:  rgba(253, 108, 123, 0.5)
 }
 
 .nav-logo {

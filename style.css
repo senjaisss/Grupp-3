@@ -114,14 +114,13 @@ nav a:hover {
 
 .logo-img {
   width: 30%;
-  max-width: 200px;
-  margin-left: 0;
+  margin-left: 50%;
 }
 
 .overlay-text {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 20%;
   transform: translate(-50%, -50%);
   font-family: "Inknut Antiqua", serif;
   color: #f3efe0;
@@ -186,6 +185,7 @@ nav a:hover {
 
   .logo-img {
     width: 40%;
+    margin-left: 120%;
   }
 }
 
