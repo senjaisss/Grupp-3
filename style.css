@@ -1,117 +1,396 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    margin: 20px;
+    font-family: 'playfair', sans-serif;
+    background-color: #7a0e2a;
 }
 
 .container {
-    width: 100%;
-    height: auto;
-    background-color: #7B0828;
-
-    display: grid;
-    grid-template-areas: 
-    "nav"
-    "section"
-    "header"
-    "main";
-    gap: 1rem;
+  height: auto;
+  background-color: #7b0828;
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "evenemang evenemang"
+    "header header"
+    "boknyheter contactbox";
+    grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 10px;
 }
 
-.logo {
-    grid-area: header;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.img-container {
-    position: relative;
-
-    /* border: 2px solid yellow; */
-}
-
-.logo-img {
-    width: 60%;
-    margin-left: 60%;
-}
-
-.overlay-text {
-    position: absolute;
-    top: 42%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-
-    font-family: "Inknut Antiqua", serif;
-    color: #F3EFE0;
-    text-shadow:
-        3px 3px 5px #000,
-        -1px -1px 5px #000,
-        1px -1px 5px #000,
-        -1px 1px 5px #000,
-        1px 1px 5px #000;
-    font-weight: 200;
-    font-size: 2.7em;
-    /* letter-spacing: .15em; */
-    white-space: nowrap;
-
-    /* border: 2px solid blue; */
-}
-
-.contactbox {
-    width: 40%;
-    height: 40%;
-    background-color: #F3EFE0; 
-    border-radius: 10px;
-    
-    position: absolute;
-    bottom: 65px; 
-    right: 84px; 
-  }
-
-.line {
-    width: 50%;
-    height: 3px;
-    background: linear-gradient(90deg, #F3EFE0, #ffffff, #F3EFE0);
-    border-radius: 3px;
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-
-    display: none;
+.container > nav {
+    grid-area: nav;
 }
 
 nav {
-    grid-area: nav;
-    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
 }
 
-section {
-    grid-area: section;
-    background-color: aquamarine;
+.navlinks {
+    display: flex;
+    gap: 2rem;
 }
 
-main {
-    grid-area: main;
-    background-color: aquamarine;
+nav a {
+    text-decoration: none;
+    color: #f3efe0;
 }
 
-@media (min-width:768px) {
-    
-    .line {
-        display: block;
-        margin: 1em;
-    }
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #f3efe0;
+}
 
-    .overlay-text {
-        position: absolute;
-        top: 40%;
-        left: 140%;
-        transform: translate(-50%, -50%);
-        font-size: 3.8em;
-        font-weight: 300;
-        letter-spacing: 3px;
-        margin: 0 auto;
-    }
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #f3efe0;
+}
 
-    .logo-img {
-        margin-left: 100%;
-    }
+nav a:hover {
+  color: #FF6978;
+}
+
+.evenemang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 200px;
+  max-width: 100%;
+  background-color: #f3efe0;
+  grid-area: evenemang;
+  border-radius: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.evenemangtext {
+  flex: 1;
+  min-width: 200px;
+  max-width: 60%;
+  margin-right: 20px;
+}
+
+.rubrik {
+  font-size: clamp(24px, 5vw, 40px);
+  margin-bottom: 10px;
+}
+
+.undertext {
+  font-size: clamp(18px, 3vw, 30px);
+}
+
+.evenemang img {
+  max-width: 100%;
+  min-height: 50px;
+  flex: 1;
+  min-width: 200px;
+  object-fit: contain;
+}
+
+.logo {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.img-container {
+  position: relative;
+}
+
+.logo-img {
+  width: 30%;
+  margin-left: 35%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-family: "Inknut Antiqua", serif;
+  color: #f3efe0;
+  text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000,
+    -1px 1px 5px #000, 1px 1px 5px #000;
+  font-weight: 200;
+  font-size: 1.8em;
+  white-space: nowrap;
+}
+
+.line {
+  width: 55%;
+  height: 3px;
+  background: linear-gradient(90deg, #f3efe0, #ffffff, #f3efe0);
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+
+  display: none;
+}
+
+.contactbox , .boknyheter {
+  background-color: #f3efe0;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactbox {
+    grid-area: contactbox;
+}
+.boknyheter {
+    grid-area: boknyheter;
+}
+
+.bokrubrik {
+  font-size: 30px;
+}
+
+.omboken {
+  font-size: 20px;
+}
+
+.content {
+  background-color: #F3EFE0;
+  color: #000;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contactform {
+  width: 100%;
+  padding: 20px; 
+}
+
+.formgroup label {
+  font-weight: bold;
+  color: #000;
+}
+
+.formgroup input, .formgroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+.newsletter {
+  font-weight: bold;
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#error-message {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+}
+
+button{
+  padding: 12px;
+  font-size: 18px;
+  background-color: #7b0828;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;   
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  width: 100%; 
+}
+
+.hover-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #7B0828;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.hover-btn:hover {
+  background-color: #FF6978; 
+
+}
+
+.follow {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .line {
+    display: block;
+    margin: 1em auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 140%;
+    transform: translate(-50%, -50%);
+    font-size: 3.8em;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin: 0;
+  }
+
+  .logo-img {
+    width: 40%;
+    margin-left: 120%;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo-img {
+    width: 30%; 
+  }
+
+  .overlay-text {
+    font-size: 1.8em;
+    left: 50%; 
+    top: 50%; 
+  }
+}
+
+.logo-img, .evenemang img {
+  transition: width 0.3s ease, max-width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactbox,
+  .boknyheter {
+    width: 100%;
+  }
+
+  .contactbox {
+    order: 6;
+  }
+
+  .evenemang {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .evenemangtext {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .evenemang img {
+    max-width: 20%;
+  }
+
+  .rubrik {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+  
+  .undertext {
+    font-size: clamp(20px, 4vw, 28px);
+  }
+
+  .content {
+    width: 90%;
+}
+
+
+button {
+    font-size: 16px;
+}
+}
+
+@media (min-width: 1200px) {
+  .evenemang {
+    max-height: 250px;
+    padding: 40px;
+  }
+
+  .evenemangtext {
+    max-width: 50%;
+  }
+
+  .evenemang img {
+    max-width: 35%;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  #searchForm {
+    display: none;
+  }
+
+  .hamburger {
+      display: block;
+  }
+
+  .navlinks {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #7b0828;
+      padding: 20px;
+  }
+
+  .navlinks.active {
+      display: flex;
+  }
+
+  nav {
+      flex-wrap: wrap;
+  }
+
+  nav form {
+      order: -1;
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .boknyheter img {
+      max-width: 90%;
+      height: auto; 
+  }
+}

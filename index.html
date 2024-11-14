@@ -1,52 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium" rel="stylesheet">
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    </head>
 
-<body class="container">
-    <nav>nav</nav>
-    <section>evenemang</section>
-    <header class="logo">
-        <div class="img-container">
-            <img class="logo-img" src="/bilder/logo smaller.png" alt="book-and-quill">
-            <h1 class="overlay-text">Pärmar & Poesi</h1>
+  <body class="container">
+    <nav>
+        <div class="navlinks">
+          <a href="/index.html">Hem</a>
+          <a href="">Boknyheter</a>
+          <a href="/kommande/kommande.html">Kommande</a>
+          <a href="/om oss/omoss.html">Om oss</a>
+          <a href="/formular/formular.html">Kontakta Oss</a>
         </div>
-        <div class="line"></div>
+        <form id="searchForm"><input type="search" placeholder="Sök..."></form>
+        <span class="hamburger">☰</span>
+    </nav>
+
+    <section class="evenemang">
+      <div class="evenemangtext">
+      <h2 class="rubrik">Julmys hos oss!</h2>
+      <p class="undertext">Vi bjuder på läs-inspo och julfika</p>
+      </div>
+      <img src="illustration.png" alt="evenemangs illustration">
+    </section>
+
+
+    <header class="logo">
+      <div class="img-container">
+        <img
+          class="logo-img"
+          src="/bilder/logo smaller.png"
+          alt="book-and-quill"
+        />
+        <h1 class="overlay-text">Pärmar & Poesi</h1>
+      </div>
+      <div class="line"></div>
     </header>
-    <main>Hej</main>
-</body>
 
-<body>
-    <section>
-      <article class="contactbox"></article>
-      </section>
-</body>
+    <section class="boknyheter">
+        <img src="bokny.png" alt="boknyheter bild">
+        <h3 class="bokrubrik">Efter Ekot av Olivia Bergdahl </h3>
+        <p class="omboken"> “Fanny har åkt till sin mormor på Västgötaslätten, för hennes mormor vet  
+          ingenting om vad som har hänt. Hon bara skrapar sin potatis och dukar på 
+          verandan och anar inte hur lätt allt går åt helvete”...</p>
+    </section>
 
-    <footer>
-    <!-- sektioner indelade för kontakta oss och formuläret-->
-        <section class="contactInfo">
-         
-        </section>
+    <article class="content">
+            <section class="contactInfo"></section>
 
-        <section class="contactForm">
-            <form action="input">
-                <label for="mail">Email</label>
-                <input type="text" id="mail">
-                <label for="namn">Förnamn</label>
-                <input type="text" id="firstName">
-                <label for="namn">Efternamn</label>
-                <input type="text" id="lastName">
-                <br>
-                <label for="message">Meddelande</label>
-                <textarea name="message" id="message">Skriv en rad</textarea>
-                <br>
-                <button type="submit">Bekräfta</button>
-            </form>
-
-        </section>
-    </footer>
+            <section class="contactForm">
+              <h2>Hör av dig till oss!</h2>
+              <form class="contactform">
+                  <article class="formgroup">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required >
+                      <span id="error-message">Vänligen fyll i en giltig e-postadress.</span>
+                  </article>
+  
+                  <article class="formgroup">
+                      <label for="firstname">Namn</label>
+                      <input type="text" id="firstname" name="firstname" required>
+                      <span id="error-message">Vänligen fyll i ditt förnamn (minst 2 bokstäver).</span>
+                  </article>
+  
+                  <article class="formgroup">
+                      <label for="lastname">Efternamn</label>
+                      <input type="text"  name="lastname" required>
+                      <span id="error-message">Vänligen fyll i ditt efternamn (minst 2 bokstäver).</span>
+                  </article>
+  
+                  <article class="formgroup">
+                      <label for="message">Meddelande</label>
+                      <textarea id="message" name="message" rows="5" required></textarea>
+                      <span id="error-message">Vänligen fyll i ditt meddelande.</span>
+                  </article>
+  
+                  <section class="newsletter">
+                      <legend>Anmäl dig till vårt nyhetsbrev!</legend>
+                      <label><input type="radio" name="newsletter" value="yes">Ja</label>
+                      <label><input type="radio" name="newsletter" value="no">Nei</label>
+                  </section>
+                  <section class="button-container">
+                  <button class="hover-btn" type="submit">Skicka</button>
+                  </section>
+              </form>
+            </section>
+        </article>
+  </body>
 </html>
