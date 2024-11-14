@@ -19,7 +19,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+     text-decoration: none;
     color: #F3EFE0;
     font-family: "Playfair", serif;
     font-weight: 300;
@@ -229,10 +229,6 @@ iframe{
             "linje-two"
             "rubrik"
             "omoss";
-    }
-
-    article h2 {
-
     }
 
     .text-boxes {
