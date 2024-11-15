@@ -9,11 +9,39 @@ body{
     background-color: #7A0E2A;
 }
 
-nav{
-    height: 10%;
-    margin-top: 1rem;
-    border-bottom-color: #F3EFE0;
-    border-width: 10px;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f3efe0;
+}
+
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #f3efe0;
+}
+
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #f3efe0;
+}
+
+nav a:hover {
+  color: #FF6978;
 }
 
 .line {
@@ -36,8 +64,12 @@ main{
 
 .banner{
     text-align: center;
-    font-family: 'inknut antiqua', sans-serif;
-    color: #F3EFE0;
+    font-family: "Inknut Antiqua", serif;
+    color: #f3efe0;
+    text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000,
+      -1px 1px 5px #000, 1px 1px 5px #000;
+    font-weight: 200;
+    font-size: 1.8em;
 }
 
 section{
@@ -77,3 +109,44 @@ section img{
     max-height: 9em;
     min-width: 5em;
 }
+
+@media (max-width: 768px) {
+    #searchForm {
+      display: none;
+    }
+  
+    .bookCard{
+        min-height: fit-content;
+    }
+
+    .hamburger {
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        display: block;
+    }
+  
+    .navlinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #7b0828;
+        padding: 20px;
+    }
+  
+    .navlinks.active {
+        display: flex;
+    }
+  
+    nav {
+        flex-wrap: wrap;
+    }
+  
+    nav form {
+        order: -1;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+  }
