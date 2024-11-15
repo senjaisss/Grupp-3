@@ -49,46 +49,43 @@
           verandan och anar inte hur lätt allt går åt helvete”...</p>
     </section>
 
-    <article class="content">
-            <div class="contactInfo"></div>
-
-            <div class="contactForm">
-              <h2>Hör av dig till oss!</h2>
+    <section class="content">
+      <h3>Hör av dig till oss!</h3>
+      <div class="contactForm">
+      
               <form class="contactform">
-                  <article class="formgroup">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" name="email" required >
-                      <span id="error-message">Vänligen fyll i en giltig e-postadress.</span>
-                  </article>
-  
-                  <article class="formgroup">
-                      <label for="firstname">Namn</label>
-                      <input type="text" id="firstname" name="firstname" required>
-                      <span id="error-message">Vänligen fyll i ditt förnamn (minst 2 bokstäver).</span>
-                  </article>
-  
-                  <article class="formgroup">
+                  <div class="formgroup">
+                      <label for="email">E-postadress</label>
+                      <input type="email" id="email" name="email" required placeholder=" ">
+                      <span class="error-message">Vänligen fyll i en giltig e-postadress.</span>
+                  </div>
+      
+                  <div class="formgroup">
+                      <label for="firstname">Förnamn</label>
+                      <input type="text" id="firstname" name="firstname" required placeholder=" ">
+                  </div>
+      
+                  <div class="formgroup">
                       <label for="lastname">Efternamn</label>
-                      <input type="text"  name="lastname" required>
-                      <span id="error-message">Vänligen fyll i ditt efternamn (minst 2 bokstäver).</span>
-                  </article>
-  
-                  <article class="formgroup">
+                      <input type="text" id="lastname" name="lastname" required placeholder=" ">
+                  </div>
+      
+                  <div class="formgroup">
                       <label for="message">Meddelande</label>
-                      <textarea id="message" name="message" rows="5" required></textarea>
-                      <span id="error-message">Vänligen fyll i ditt meddelande.</span>
-                  </article>
-  
+                      <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                  </div>
+      
                   <section class="newsletter">
-                      <legend>Anmäl dig till vårt nyhetsbrev!</legend>
+                      <h3>Anmäl dig till vårt nyhetsbrev!</h3>
                       <label><input type="radio" name="newsletter" value="yes">Ja</label>
                       <label><input type="radio" name="newsletter" value="no">Nei</label>
                   </section>
-                  <section class="button-container">
-                  <button class="hover-btn" type="submit">Skicka</button>
-                  </section>
+      
+                  <div class="button-container">
+                      <button class="hover-btn" type="submit">Skicka</button>
+                  </div>
               </form>
-            </div>
-        </article>
+          </div>
+      </section>
   </body>
 </html>

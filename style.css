@@ -203,10 +203,14 @@ nav a:hover {
   padding: 10px;
 }
 
-#error-message {
+.error-message {
   color: red;
   font-size: 0.9em;
   display: none;
+}
+
+input:invalid:not(:placeholder-shown) + .error-message {
+  display: block;
 }
 
 button{
